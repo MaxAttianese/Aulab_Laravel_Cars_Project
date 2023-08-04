@@ -20,7 +20,7 @@
                     <form action="{{route('cars.destroy', $car)}}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button class="btn btn-danger">Elimina Annuncio</button>
+                        <button class="btn btn-danger" onclick="return confirm('Sicuro di volerlo eliminare?')">Elimina Annuncio</button>
                     </form>
                     <a class="ms-3 btn btn-primary" href="{{route('cars.create')}}">Aggiungi annuncio</a>
                 </div>

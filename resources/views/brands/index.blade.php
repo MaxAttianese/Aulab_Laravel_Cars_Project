@@ -29,7 +29,7 @@
                             <td class="d-flex  ps-5 py-2"><a href="{{route('brands.edit', $brand)}}" class="btn btn-sm btn-primary me-3">Modifica</a> <form action="{{route('brands.destroy', $brand)}}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-sm btn-danger">Elimina</button>
+                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Sicuro di volerlo eliminare?')">Elimina</button>
                             </form></td>
                         </tr>
                         @endforeach

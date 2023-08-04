@@ -157,6 +157,8 @@ class CarController extends Controller
      */
     public function destroy(Car $car)
     {
+        $car->extras()->detach(); 
+
         $car->delete();
 
         return redirect()->route("cars.index")->with(["success" => "Annuncio modificato con successo"]);
