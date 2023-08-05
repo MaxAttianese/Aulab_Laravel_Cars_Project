@@ -64,13 +64,9 @@
                         </div>
                         <div class="col-12 col-md-3 ps-5">
                             <p class="fst-italic small m-0">Extra:</p>
-                            @if($car->extra)
                             @foreach($car->extras as $extra)
                             <div class="pt-3"><span class="fst-italic">.{{$extra->name}}:</span> <p class="fw-bold m-0 text-end">{{\App\Custom\Price::formatPrice($extra->price)}}</p></div>
                             @endforeach
-                            @else
-                            <div class="pt-3"><span class="fst-italic">.Nessun extra disponibile</span> </div>
-                            @endif
                         </div>
                     </div>
                     <div class="col-0 col-md-1"></div>
